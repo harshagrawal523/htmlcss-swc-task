@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <!-- Tailwind CSS CDN -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
@@ -34,14 +34,34 @@
             color: #02A689;
         }
     </style>
+    <script>
+      function openSlideMenu(){
+        document.getElementById('menu').style.width = '250px';
+        document.getElementById('content').style.marginLeft = '250px';
+      }
+      function closeSlideMenu(){
+        document.getElementById('menu').style.width = '0';
+        document.getElementById('content').style.marginLeft = '0';
+      }
+    </script>
 </head>
 <body>
     <div class=" w-full sm:h-20 flex flex-col sm:flex-row justify-center sm:justify-between items-center py-4 px-4 md:px-16 shadow-md bg-white">
       <div class="flex items-center justify-start sm:w-64 sm:border-r-2 border-gray-200">
-          <svg width="45" height="45" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <a href="#" onclick="openSlideMenu()"><svg width="45" height="45" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect y="0.805267" width="32.4175" height="32.4175" rx="2.567" fill="#02A689"/>
               <path d="M11.1684 10.893H15.4316L11.9652 16.8845L12.9722 18.8181L17.5913 10.893H21.2435L24.7414 16.9651L21.2033 23.135H16.9333L20.4648 17.0255L19.3973 15.2262L14.7647 23.135H11.1728L7.67603 16.884L11.1684 10.893Z" fill="white"/>
-          </svg>                
+          </svg> </a>   
+          <div id="menu" class="nav">
+            <a href="#" class="close" onclick="closeSlideMenu()">
+              <i class="fas fa-times"></i>
+            </a>
+            <a href="#">All Team</a>
+            <a href="#">Core</a>
+            <a href="#">Developers</a>
+            <a href="#">Designers</a>
+            <a href="#">Mentors</a>
+          </div>            
           <p class="text text-accent text-2xl font-extrabold font-open-sans ml-3">Directory</p>
       </div>
 
@@ -57,96 +77,79 @@
       <img src="loader.gif" alt="" class="mt-5 h-10 w-10 object-cover hidden" id="loader">
   
     </div>
-    <div class="wrapper">
-        <div class="sidebar">
-            <h2>Sidebar</h2>
-            <ul>
-                
-                <li><a href="#">All Team</a></li>
-                <li><a href="#">Core</a></li>
-                <li><a href="#">Developers</a></li>
-                <li><a href="#">Designers</a></li>
-                <li><a href="#">Mentors</a></li>
-                
-            </ul> 
-
-
-            <button type="button" class="btn btn-success contact"> +  &nbsp; Contact</button>
-            
-        </div>
-        <div class="main_content">
+    <div class="main_content">
             <div class="row">
-            <div class="card py-3 py-sm-0" style="width: 241px ; margin-left: 10vw;height: 285.05px; ">
+            <div class="card " style="width: 241px ; margin-left: 22vw;height: 285.05px; ">
                 <img src="Avatar.png" class="card-img-top" style="width: 50%; align-self: center; margin-top: 2vh;">
                 <div class="card-body">
                   <h5 class="card-title" style="text-align: center; color: #02A689;">Teodoro Luck</h5>
                   <p class="card-text" style="text-align: center;font-size: 14px;">Product Designer at Google <br><font style="color: blue;">@Core</font><br> SWC 2018-2021</p>
                 <div class="row">
-                    <img src="chat.png" alt="" style="width: 20%;margin-left: 4.5vw;margin-top: 2vh;">
-                <img src="Vector.png" alt=""  style="width: 20%;margin-left: 1px;margin-top: 2vh;">
+                    <img src="chat.png" alt="" style="width: 20%;margin-left: 4.5vw;margin-top: 2vh;" class="chat">
+                <img src="Vector.png" alt=""  style="width: 20%;margin-left: 1px;margin-top: 2vh;" class="call">
                 </div>  
                 </div>
               </div>
-              <div class="card py-3 py-sm-0" style="width: 241px ; margin-left: 3vw; height: 285.05px;">
+              <div class="card " style="width: 241px ; margin-left: 5vw; height: 285.05px;">
                 <img src="Avatar.png" class="card-img-top" style="width: 50%; align-self: center; margin-top: 2vh;">
                 <div class="card-body">
                   <h5 class="card-title" style="text-align: center; color: #02A689;">Teodoro Luck</h5>
                   <p class="card-text" style="text-align: center;font-size: 14px;">Product Designer at Google <br> <font style="color: blue;">@Core</font> <br> SWC 2018-2021</p>
                   <div class="row">
-                    <img src="chat.png" alt="" style="width: 20%;margin-left: 4.5vw;margin-top: 2vh;">
+                    <img src="chat.png" alt="" style="width: 20%;margin-left: 4.5vw;margin-top: 2vh;"class="chat">
                 <img src="Vector.png" alt=""  style="width: 20%;margin-left: 1px;margin-top: 2vh;">
                 </div>
                 </div>
               </div>
-              <div class="card py-3 py-sm-0" style="width: 241px ; margin-left: 3vw;height: 285.05px;">
+              <div class="card " style="width: 241px ; margin-left: 5vw;height: 285.05px;">
                 <img src="Avatar.png" class="card-img-top" style="width: 50%; align-self: center; margin-top: 2vh;">
                 <div class="card-body">
                   <h5 class="card-title" style="text-align: center; color: #02A689;">Teodoro Luck</h5>
                   <p class="card-text" style="text-align: center;font-size: 14px;">Product Designer at Google <br> <font style="color: blue;">@Core</font>  <br> SWC 2018-2021</p>
                   <div class="row">
-                    <img src="chat.png" alt="" style="width: 20%;margin-left: 4.5vw;margin-top: 2vh;">
+                    <img src="chat.png" alt="" style="width: 20%;margin-left: 4.5vw;margin-top: 2vh;"class="chat">
                 <img src="Vector.png" alt=""  style="width: 20%;margin-left: 1px;margin-top: 2vh;">
                 </div>
                 </div>
               </div>
               </div>
               <div class="row" style="margin-top: 4vh;">
-                <div class="card py-3 py-sm-0" style="width: 241px ; margin-left: 10vw;height: 285.05px; ">
+                <div class="card " style="width: 241px ; margin-left: 22vw;height: 285.05px; ">
                   <img src="Avatar.png" class="card-img-top" style="width: 50%; align-self: center; margin-top: 2vh;">
                   <div class="card-body">
                     <h5 class="card-title" style="text-align: center; color: #02A689;">Teodoro Luck</h5>
                     <p class="card-text" style="text-align: center;font-size: 14px;">Product Designer at Google <br><font style="color: blue;">@Core</font><br> SWC 2018-2021</p>
                   <div class="row">
-                      <img src="chat.png" alt="" style="width: 20%;margin-left: 4.5vw;margin-top: 2vh;">
-                  <img src="Vector.png" alt=""  style="width: 20%;margin-left: 1px;margin-top: 2vh;">
+                      <img src="chat.png" alt="" style="width: 20%;margin-left: 4.5vw;margin-top: 2vh;" class="chat">
+                  <img src="Vector.png" alt=""  style="width: 20%;margin-left: 1px;margin-top: 2vh;" class="call">
                   </div>  
                   </div>
                 </div>
-                  <div class="card py-3 py-sm-0" style="width: 241px ; margin-left: 3vw; height: 285.05px;">
-                    <img src="Avatar.png" class="card-img-top" style="width: 50%; align-self: center; margin-top: 2vh;">
-                    <div class="card-body">
-                      <h5 class="card-title" style="text-align: center; color: #02A689;">Teodoro Luck</h5>
-                      <p class="card-text" style="text-align: center;font-size: 14px;">Product Designer at Google <br> <font style="color: blue;">@Core</font> <br> SWC 2018-2021</p>
-                      <div class="row">
-                        <img src="chat.png" alt="" style="width: 20%;margin-left: 4.5vw;margin-top: 2vh;">
-                    <img src="Vector.png" alt=""  style="width: 20%;margin-left: 1px;margin-top: 2vh;">
-                    </div>
-                    </div>
+                <div class="card " style="width: 241px ; margin-left: 5vw; height: 285.05px;">
+                  <img src="Avatar.png" class="card-img-top" style="width: 50%; align-self: center; margin-top: 2vh;">
+                  <div class="card-body">
+                    <h5 class="card-title" style="text-align: center; color: #02A689;">Teodoro Luck</h5>
+                    <p class="card-text" style="text-align: center;font-size: 14px;">Product Designer at Google <br> <font style="color: blue;">@Core</font> <br> SWC 2018-2021</p>
+                    <div class="row">
+                      <img src="chat.png" alt="" style="width: 20%;margin-left: 4.5vw;margin-top: 2vh;"class="chat">
+                  <img src="Vector.png" alt=""  style="width: 20%;margin-left: 1px;margin-top: 2vh;">
                   </div>
-                  <div class="card py-3 py-sm-0" style="width: 241px ; margin-left: 3vw;height: 285.05px;">
-                    <img src="Avatar.png" class="card-img-top" style="width: 50%; align-self: center; margin-top: 2vh;">
-                    <div class="card-body">
-                      <h5 class="card-title" style="text-align: center; color: #02A689;">Teodoro Luck</h5>
-                      <p class="card-text" style="text-align: center;font-size: 14px;">Product Designer at Google <br> <font style="color: blue;">@Core</font>  <br> SWC 2018-2021</p>
-                      <div class="row">
-                        <img src="chat.png" alt="" style="width: 20%;margin-left: 4.5vw;margin-top: 2vh;">
-                    <img src="Vector.png" alt=""  style="width: 20%;margin-left: 1px;margin-top: 2vh;">
-                    </div>
-                    </div>
                   </div>
+                </div>
+                <div class="card " style="width: 241px ; margin-left: 5vw;height: 285.05px;">
+                  <img src="Avatar.png" class="card-img-top" style="width: 50%; align-self: center; margin-top: 2vh;">
+                  <div class="card-body">
+                    <h5 class="card-title" style="text-align: center; color: #02A689;">Teodoro Luck</h5>
+                    <p class="card-text" style="text-align: center;font-size: 14px;">Product Designer at Google <br> <font style="color: blue;">@Core</font>  <br> SWC 2018-2021</p>
+                    <div class="row">
+                      <img src="chat.png" alt="" style="width: 20%;margin-left: 4.5vw;margin-top: 2vh;"class="chat">
+                  <img src="Vector.png" alt=""  style="width: 20%;margin-left: 1px;margin-top: 2vh;">
+                  </div>
+                  </div>
+                </div>
                   </div>
         </div>
-    </div>
+    
 
   
 </body>
